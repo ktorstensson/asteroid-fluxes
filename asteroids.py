@@ -93,13 +93,13 @@ if __name__ == "__main__":
                    dfm.groupby('source').fd350.sum()).mean()
     fd850_ratio = (dfm.groupby('source').fd850.sum() /
                    dfm.groupby('source').fd350.sum()).mean()
-    fig.text(0.95, 0.25, r'$S\,\frac{450}{350}\,\mu$m = ' +
+    fig.text(0.95, 0.25, r'$S\,\frac{450}{350}\,\mu$m ~ ' +
              '{:.2f}'.format(fd450_ratio),
              ha='right')
-    fig.text(0.95, 0.18, r'$S\,\frac{850}{350}\,\mu$m = ' +
+    fig.text(0.95, 0.18, r'$S\,\frac{850}{350}\,\mu$m ~ ' +
              '{:.2f}'.format(fd850_ratio),
              ha='right')
     plt.tight_layout()
-    plt.show()
+    # plt.show()
     plot_file = 'plots/asteroids_' + str(year) + '.png'
     plt.savefig(plot_file, bbox_inches="tight", dpi=150)
